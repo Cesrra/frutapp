@@ -1,4 +1,5 @@
 import { Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import { DescriptionFruit } from './DescriptionFruit';
 
 export const CardFruit = ({ item, custom }) => {
   
@@ -19,23 +20,12 @@ export const CardFruit = ({ item, custom }) => {
           alt={ item.name }
         />
         <CardContent>
-            <Grid container justifyContent="space-between" alignItems="center">
-                <Grid item>
-                    <Typography gutterBottom variant="h6" component="div">
-                        { item.name }
-                    </Typography>
-                </Grid> 
-                <Grid item>
-                    <Typography gutterBottom variant="h7" component="div">
-                        {`${priceFormat} cop/kg`} 
-                    </Typography>
-                </Grid>
-          </Grid>
-          <Typography variant="body2" color="text.secondary">
-            <strong>{ `Alrededor de ${item.calories}` }</strong> 
-            <hr />
-            { item.description }
-          </Typography>
+          <DescriptionFruit
+            name={ item.name}
+            price={ item.price}
+            calories={ item.calories}
+            description={ item.description}
+          />
         </CardContent>
       </CardActionArea>
     </Card>
