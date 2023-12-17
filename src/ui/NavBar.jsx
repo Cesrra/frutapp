@@ -1,5 +1,6 @@
 import { LogoutOutlined, MenuOutlined } from "@mui/icons-material"
 import { AppBar, Grid, IconButton, Toolbar, Typography } from "@mui/material"
+import { Link } from "react-router-dom"
 
 // eslint-disable-next-line react/prop-types
 export const NavBar = ({ drawerWidth = 0 }) => {
@@ -25,9 +26,15 @@ export const NavBar = ({ drawerWidth = 0 }) => {
                 justifyContent="space-between"
                 alignItems="center"
             >
-                <Typography variant="h6" noWrap component="div" >Frutapp</Typography>
+                <Typography variant="h6" noWrap component="div" >
+                    <Link to="/home" style={{ textDecoration: 'none', color: 'inherit' }} >
+                        Frutapp
+                    </Link>
+                </Typography>
                 <IconButton color="error">
-                    <LogoutOutlined />
+                    <Link to="/auth" style={{ textDecoration: 'none', color: 'inherit' }} >
+                        <LogoutOutlined />
+                    </Link>
                 </IconButton>
             </Grid>
         </Toolbar>
