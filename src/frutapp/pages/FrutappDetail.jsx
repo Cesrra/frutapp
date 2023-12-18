@@ -1,33 +1,36 @@
 import { useParams } from "react-router"
 import { FrutappLayouth } from "../layout/FrutappLayouth"
 
-import itemData from '../../dummy_data';
 import { DescriptionFruit } from "../components/DescriptionFruit";
-import { Container } from "@mui/system";
 import { ActionSection } from "../components/ActionSection";
 import { Grid } from "@mui/material";
+import { getFruitById } from "../helpers";
+import { useEffect, useState } from "react";
 
 export const FrutappDetail = () => {
-
-    const { id } = useParams()
-    const item = itemData.find(item => item.id == id)
+    const {id} = useParams()
+    const [fruit, setFruit] = useState({})
+    
+    useEffect(() => {
+        setFruit(getFruitById(id))
+    }, [])
 
     return (
         <FrutappLayouth>
             <Grid container spacing={3} alignItems="center" >                
                 <Grid item lg={4} md={4} sm={4} xs={12} order={{ md: 1, sm: 1, xs: 2 }} >
                     <img 
-                        src={ item.imgUrl }
-                        alt={ item.name }
+                        src={ fruit.imgUrl }
+                        alt={ fruit.name }
                         style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
                     />
                 </Grid>
                 <Grid item lg={4} md={4} sm={4} xs={12} order={{ md: 2, sm: 2, xs: 1 }} >
                     <DescriptionFruit
-                        name={ item.name}
-                        price={ item.price}
-                        calories={ item.calories}
-                        description={ item.description}
+                        name={ fruit.name}
+                        price={ fruit.price}
+                        calories={ fruit.calories}
+                        description={ fruit.description}
                         style={{ width: '100%' }}
                     />
                 </Grid>

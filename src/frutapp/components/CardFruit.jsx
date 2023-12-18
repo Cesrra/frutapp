@@ -2,15 +2,7 @@ import { Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from '
 import { DescriptionFruit } from './DescriptionFruit';
 
 export const CardFruit = ({ item, custom }) => {
-  
-    const priceFormat = new Intl.NumberFormat('es-CO', {
-      style: 'currency',
-      currency: 'COP',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(item.price);
-  
-    return (
+  return (
     <Card key={item.id}>
       <CardActionArea>
         <CardMedia

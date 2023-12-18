@@ -16,8 +16,10 @@ export const DescriptionFruit = ({ name, price, calories, description }) => {
             </Grid>
           </Grid>
           <Typography variant="body2" color="text.secondary">
-            <strong>{ `Alrededor de ${calories}` }</strong> 
-            <hr />
+            <strong>{ `Alrededor de ${calories}` }</strong>
+          </Typography>
+          <hr />
+          <Typography variant="body2" color="text.secondary">
             { description }
           </Typography>
     </>
