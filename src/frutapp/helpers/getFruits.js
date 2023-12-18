@@ -1,4 +1,5 @@
 import fruits from '../data/fruits'
+
 const formatPrice = (price) => {
     const priceFormat = new Intl.NumberFormat('es-CO', {
         style: 'currency',
@@ -11,7 +12,7 @@ const formatPrice = (price) => {
 
 
 export const getFruits = () => {
-    const newFruits = fruits.map(fruit => ({
+    const newFruits = fruits?.map(fruit => ({
         ...fruit,
         price: formatPrice(fruit.price)
     }))

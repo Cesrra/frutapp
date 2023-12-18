@@ -4,7 +4,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
-const options = [1, 2,3,4,5,6,7,8,9,10];
+const options = ['1', '2','3','4','5','6','7','8','9','10'];
 
 export const ActionSection = () => {
 

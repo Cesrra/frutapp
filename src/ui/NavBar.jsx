@@ -55,9 +55,9 @@ export const NavBar = ({ drawerWidth = 0 }) => {
                     <Link to="/home" style={{ textDecoration: 'none', color: 'inherit', padding: 6 }} >
                         Home
                     </Link>
-                    <Link to="/cart" style={{ textDecoration: 'none', color: 'inherit', padding: 6 }} >
+                    {/* <Link to="/cart" style={{ textDecoration: 'none', color: 'inherit', padding: 6 }} >
                         Carrito
-                    </Link>                    
+                    </Link>                     */}
                     <IconButton color="error" onClick={ onLogout } >                        
                         <LogoutOutlined />
                     </IconButton>
