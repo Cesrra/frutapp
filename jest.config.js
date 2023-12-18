@@ -1,3 +1,3 @@
 module.exports = {
-    testEnviroment: 'jest-enviroment-jsdom',
+    testEnvironment: 'jsdom',
 }
